@@ -6,9 +6,10 @@
 
 > React를 이용한 Habit Tracker 프로그램  <br /> 
 
-[<h3>🏠 <b>homepage</b>](https://github.com/Jang-Ahyoung)</h3>
-
-## ✨ Demo 
+### 🎅 developer
+ - [장아영](https://github.com/Jang-Ahyoung)<br /> <br /> 
+ 
+### ✨ Demo 
 
 ![habit](https://user-images.githubusercontent.com/71692593/103171187-737b9680-488d-11eb-80f1-5676bf7e6768.jpg)
 
