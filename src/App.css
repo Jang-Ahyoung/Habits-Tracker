@@ -12,17 +12,36 @@ button {
   cursor: pointer;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+}
+
+.navbar-container {
+  padding: 0;
+  margin: 0;
+  padding-top: 3%;
+}
 .navbar {
   text-align: center;
   font-size: 2rem;
-  padding: 1em;
-  background-color: rgb(218, 195, 153);
+  width: 350px;
+  padding: 30px 50px;
+  border-radius: 30px;
+  border: 2px solid black;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
-.navbar-logo {
-  color: rgb(108, 156, 19);
-  margin-right: 0.5em;
+.navbar-border {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 30px;
+  width: 350px;
+  height: 100px;
+  transform: rotate(3deg) translate(-70px, -30px);
 }
 
 .navbar-count {
@@ -31,8 +50,7 @@ button {
   font-size: 2rem;
   height: 2.5rem;
   width: 2.5rem;
-  /* padding: 0.1rem 0.8rem; */
-  line-height: 2.5rem;
+  line-height: 2rem;
   margin-left: 0.4em;
   background-color: rgb(108, 156, 19);
   color: white;
@@ -47,25 +65,24 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5em;
+  margin: 0.5em 0;
 }
 .add-input {
   font-size: 1.2rem;
   height: 2rem;
   width: 20rem;
-  padding: 0.1rem 0.8rem;
+  padding: 1.5rem 1.3rem;
   margin: 0;
-
   margin-right: 0.4em;
-  border-radius: 20rem;
-  border-color: black;
+  border-radius: 10rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
   outline: none;
 }
 
 .add-button {
-  /* height: 100%; */
   font-size: 1rem;
-  padding: 0.3em 0.5em;
+  padding: 0.8rem;
   border-radius: 20rem;
   margin: 0;
   background-color: rgb(108, 156, 19);
@@ -75,6 +92,7 @@ button {
 ul {
   padding-left: 0;
 }
+
 .habit {
   text-align: center;
   font-size: 1.5rem;
@@ -127,4 +145,29 @@ ul {
   padding: 0.2em 1em;
   background-color: rgb(108, 156, 19);
   color: white;
+}
+
+.habits-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100% - 250px);
+}
+
+.habits-border,
+.habits-border2 {
+  position: absolute;
+  border: 1.5px solid gray;
+  height: calc(100% - 220px);
+  width: 30rem;
+  transform: rotate(-0.5deg);
+  border-radius: 3rem;
+  z-index: -10;
+}
+.habits-border2 {
+  transform: rotate(2deg);
+}
+.habits-content {
+  overflow-y: scroll;
 }
