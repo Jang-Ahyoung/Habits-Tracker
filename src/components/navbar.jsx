@@ -4,10 +4,9 @@ class Navbar extends Component {
     render() {
         return (
             <nav className='navbar'>
-                <i className ="navbar-logo fas fa-leaf"></i>
+                <div className='navbar-border'></div>
                 <span >Habit Tracker</span>
-                {/* //props로 전달받은 totalCount 전달해줘! -> app.js에서 navbar에 실제로 전달해줘야해!!! */}
-                <span className ="navbar-count">{this.props.totalCount}</span>
+                <div className="navbar-count">{this.props.totalCount}</div>{/* //props로 전달받은 totalCount 전달해줘! -> app.js에서 navbar에 실제로 전달해줘야해!!! */}
             </nav>
         );
     }
