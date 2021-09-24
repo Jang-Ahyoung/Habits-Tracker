@@ -12,6 +12,17 @@ button {
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(206, 203, 203);
+  border-radius: 15px;
+}
+::-webkit-scrollbar-button {
+  width: 10px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -47,16 +58,21 @@ button {
 .navbar-count {
   display: inline-block;
   text-align: center;
+  font-weight: 100;
   font-size: 2rem;
   height: 2.5rem;
   width: 2.5rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
   margin-left: 0.4em;
   background-color: rgb(108, 156, 19);
   color: white;
   border-radius: 50%;
+  font-family: initial;
 }
 
+.screen-notice {
+  display: none;
+}
 .habits {
   padding: 0.5em;
   padding-top: 2em;
@@ -78,6 +94,7 @@ button {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
   outline: none;
+  letter-spacing: 0.1rem;
 }
 
 .add-button {
@@ -87,6 +104,7 @@ button {
   margin: 0;
   background-color: rgb(108, 156, 19);
   color: white;
+  letter-spacing: 0.1rem;
 }
 
 ul {
@@ -94,10 +112,17 @@ ul {
 }
 
 .habit {
+  display: flex;
+  align-items: center;
   text-align: center;
   font-size: 1.5rem;
   padding: 0.5em;
   list-style: none;
+}
+
+.habit-name {
+  padding: 5px;
+  text-align: right;
 }
 
 .habit-count {
@@ -109,7 +134,7 @@ ul {
   line-height: 1.8rem;
   margin-left: 0.2em;
   margin-right: 0.5em;
-  background-color: rgb(128, 208, 233);
+  background-color: royalblue;
   color: white;
   border-radius: 50%;
 }
@@ -118,6 +143,7 @@ ul {
   font-size: 1.8rem;
   margin: 0 0.1em;
   background-color: transparent;
+  transition: 0.5s;
 }
 
 .habit-button:hover {
@@ -126,39 +152,47 @@ ul {
 
 .habit-increase,
 .habit-decrease {
-  color: rgb(248, 241, 135);
+  color: sienna;
 }
 
 .habit-delete {
   font-size: 1.6rem;
-  color: crimson;
+  color: darkgray;
+  transition: 0.5s;
 }
 .habit-delete:hover {
-  color: crimson;
+  color: black;
+  transform: scale(110%);
 }
 
 .habits-reset {
-  position: absolute;
-  margin-top: 1rem;
-  right: 30%;
   font-size: 1.3rem;
-  padding: 0.2em 1em;
-  background-color: rgb(108, 156, 19);
+  padding: 0.4em 1em;
+  border-radius: 3rem;
+  margin: 0;
+  position: relative;
+  left: 35%;
+  background-color: royalblue;
   color: white;
+  transition: 0.5s;
+  letter-spacing: 0.1rem;
 }
 
+.habits-reset:hover {
+  letter-spacing: 0.2rem;
+}
 .habits-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100% - 250px);
+  height: calc(100% - 18rem);
 }
 
 .habits-border,
 .habits-border2 {
   position: absolute;
-  border: 1.5px solid gray;
+  border: 2px solid gray;
   height: calc(100% - 220px);
   width: 30rem;
   transform: rotate(-0.5deg);
@@ -169,5 +203,22 @@ ul {
   transform: rotate(2deg);
 }
 .habits-content {
-  overflow-y: scroll;
+  overflow: auto;
+  height: 80%;
+}
+
+@media screen and (max-width: 600px) and (max-height: 400px) {
+  .container {
+    display: none;
+  }
+  .screen-notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0 5%;
+    font-size: 4vw;
+    line-height: 3rem;
+  }
 }
